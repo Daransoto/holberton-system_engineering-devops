@@ -1,5 +1,13 @@
 #Changes the configuration of the ssh client.
-exec {'Append to ssh config.':
-command  => '/bin/echo "IdentityFile ~/.ssh/holberton
-PasswordAuthentication No" >> /etc/ssh/sshd_config'
+include stdlib
+file_line {'Turn off passwd auth':
+ensure => present,
+path   => '/etc/ssh/sshd_config',
+line   => 'PasswordAuthentication no',
+match  => '^PasswordAuthentication'
+}
+file_line {'Declare identity file':
+ensure => present,
+path   => '/etc/ssh/sshd_config',
+line   => 'IdentityFile ~/.ssh/holberton',
 }
