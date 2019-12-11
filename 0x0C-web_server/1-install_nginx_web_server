@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 #Installs NginX.
+apt-get -y update
 apt-get -y install nginx
 ufw allow 'Nginx HTTP'
 echo Holberton School > replace
