@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script configures the http response saying which server is serving.
-sudo sed -ie "s/^server {$/server {\n\tadd_header X-Served-By \$hostname;/g" /etc/nginx/sites-available/default
+sed -ie "s/^server {$/server {\n\tadd_header X-Served-By \$hostname;/g" /etc/nginx/sites-available/default
 service nginx restart
