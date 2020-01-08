@@ -2,5 +2,5 @@
 # This script starts nginx service with user nginx on port 8080.
 chmod 777 /etc/nginx/nginx.conf
 sed -i 's/80/8080/g' /etc/nginx/sites-enabled/default
-pkill apache2
-sudo -u nginx service nginx start
+pkill -f apache2
+sudo -u nginx service nginx restart
