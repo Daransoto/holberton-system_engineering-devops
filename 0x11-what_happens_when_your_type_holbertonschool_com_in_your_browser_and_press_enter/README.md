@@ -10,14 +10,14 @@ This project is about writing a blog about what happens under the hood when we t
 
 | File | Description |
 | ------ | ------ |
-| [0-blog_post]() | Link to the blog in Linkedin. |
+| [0-blog_post](0-blog_post) | Link to the blog in Linkedin. |
 
 ### Advanced Tasks
 
 | File | Description |
 | ------ | ------ |
-| [1-what_happen_when_diagram]() | Link to an image describing what was said in the blog. |
-| [2-contribution-to_what-happens-when_github_answer]() | Link to a pull request contributing to [This repo](https://github.com/alex/what-happens-when)  |
+| [1-what_happen_when_diagram](1-what_happen_when_diagram) | Link to an image describing what was said in the blog. |
+| [2-contribution-to_what-happens-when_github_answer](2-contribution-to_what-happens-when_github_answer) | Link to a pull request contributing to [This repo](https://github.com/alex/what-happens-when)  |
 
 ## Author
 
