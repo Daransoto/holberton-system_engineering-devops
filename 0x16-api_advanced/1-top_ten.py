@@ -8,8 +8,8 @@ def top_ten(subreddit):
     URL = "https://www.reddit.com/r/{}/hot.json?limit=10"
     Headers = {"User-Agent": "Custom"}
     response = requests.get(URL.format(subreddit), headers=Headers)
-    hot = response.json().get('data').get('children')
+    hot = response.json().get('data', {}).get('children', None)
     if response.status_code != 200 or not hot:
-        print("None")
+        print(None)
     for post in hot:
         print(post.get('data').get('title'))
