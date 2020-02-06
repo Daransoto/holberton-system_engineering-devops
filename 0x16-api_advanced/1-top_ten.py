@@ -5,11 +5,11 @@ import requests
 
 def top_ten(subreddit):
     """ Gets the top ten. """
-    URL = "https://www.reddit.com/r/{}/hot.json"
+    URL = "https://www.reddit.com/r/{}/hot.json?limit=10"
     Headers = {"User-Agent": "Custom"}
     response = requests.get(URL.format(subreddit), headers=Headers)
     hot = response.json().get('data').get('children')
     if response.status_code != 200 or not hot:
         print("None")
-    for post in hot[:10]:
+    for post in hot:
         print(post.get('data').get('title'))
