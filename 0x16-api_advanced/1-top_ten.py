@@ -4,6 +4,7 @@ import requests
 
 
 def top_ten(subreddit):
+    """ Gets the top ten. """
     URL = "https://www.reddit.com/r/{}/hot.json"
     Headers = {"User-Agent": "Custom"}
     response = requests.get(URL.format(subreddit), headers=Headers)
